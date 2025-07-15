@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import API_BASE_URL from "../config/api";
 import "./Home.css";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
     }
 
     // Fetching all posts
-    fetch("http://localhost:5000/allposts", {
+    fetch(`${API_BASE_URL}/allposts`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

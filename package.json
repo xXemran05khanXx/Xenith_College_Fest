@@ -1,4 +1,21 @@
 {
+  "name": "xenith-college-fest",
+  "version": "1.0.0",
+  "description": "College Fest Management System",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "gh-pages": "^6.2.0"
   }
