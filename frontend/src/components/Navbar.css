@@ -1,0 +1,100 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 1px 5px 5px #e0dcdc;
+    background-color: white;
+}
+
+.nav-logo {
+    width: 40px;
+    height: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-menu li {
+    list-style: none;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu li:hover {
+    color: #1da1f2;
+    /* Twitter blue */
+}
+
+.nav-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.primaryBtn {
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    border: none;
+    color: white;
+    background: #db183c;
+    border-radius: 25px;
+    margin-left: 20px;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(219, 24, 44, 0.6);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
